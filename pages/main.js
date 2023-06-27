@@ -20,6 +20,7 @@ function saveAnswers() {
 
 function resetAll() {
     userAnswers = {};
+    saveAnswers();
     userEvaluation = {};
     userStatistics = {};
     userChanges ={}
