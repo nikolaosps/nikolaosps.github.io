@@ -1,0 +1,73 @@
+<!DOCTYPE htlm5>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/akol.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="wrapper" class="akol2">
+      <h1>Άσκηση Ακολουθίας-Αναδρομής 2</h1>
+      <div id="perigrafi">
+        Δίνονται οι πρώτοι 6 όροι μιας ακολουθίας: <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;3,
+        &nbsp;&nbsp;&nbsp;&nbsp;4,&nbsp;&nbsp;&nbsp;&nbsp;6,
+        &nbsp;&nbsp;&nbsp;&nbsp;10,&nbsp;&nbsp;&nbsp;&nbsp;18,
+        &nbsp;&nbsp;&nbsp;&nbsp;34 <br />
+
+        Μπορείς να βρεις τι σχέση έχει κάθε όρος με τον <br />
+        προηγούμενό του;
+      </div>
+      <form>
+        <ul id="answers" class="asnw2">
+          <li>
+            <input type="radio" id="a" name="answer" value="a" />
+            <label for="a">Είναι αυξημένος κατά 1</label>
+          </li>
+          <li>
+            <input type="radio" id="b" name="answer" value="b" />
+            <label for="b">Είναι το τριπλάσιό του μειωμένο κατά 5</label>
+          </li>
+          <li>
+            <input type="radio" id="c" name="answer" value="c" />
+            <label for="c">Είναι το τετράγωνό του μειωμένο κατά 5</label>
+          </li>
+          <li>
+            <input type="radio" id="d" name="answer" value="d" />
+            <label for="d">Είναι το διπλάσιό του μειωμένο κατά 2</label>
+          </li>
+          <li>
+            <input type="radio" id="e" name="answer" value="e" />
+            <label for="e"
+              >Είναι το διπλάσιό του αφού πρώτα είχε μειωθεί κατά 1</label
+            >
+          </li>
+        </ul>
+        <input
+          type="button"
+          style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            width: 100px;
+          "
+          value="Υποβολή"
+          onclick="askSubmitHandler('ask_akol2', 'answer')"
+        />
+      </form>
+        <button
+          style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100px;
+          "
+          onclick = "window.location.href = 'KoskinoErat.html';"
+        >
+          Επόμενο
+        </button>
+      </a>
+    </div>
+  </body>
+</html>

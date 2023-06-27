@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(196, 194, 194);
+    font-size: 20px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 21px;
+    color: black;
+    padding: 10px;
+  }
+  #perigrafi {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #f2f7ff;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 5px 5px #206c68;
+  }
+  .step-title {
+    margin-right: 12px;
+  }
+  ul{
+    list-style-type: none;
+  }
+  ul#answers {
+     list-style-type: lower-greek;
+     margin-left: 3%; 
+  }
+  #wrapper {
+    background-color: #67ab9f;
+    max-width: 600px;
+    margin: 0 auto;
+    border:1px solid #124845;
+    border-radius: 10px;
+    background-image: url('pictures/teacher1.png') ;
+    background-repeat: no-repeat;
+    background-position: 90% 95%;
+    background-size: 165px;
+    padding-bottom: 40px;
+  }
+  #wrapper.epan2 {
+    background-image: url('pictures/teacher2.png') ;
+  }

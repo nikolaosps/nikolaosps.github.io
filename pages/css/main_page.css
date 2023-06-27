@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(185, 178, 178);
+    font-size: 15px;
+    background-image: url('pictures/numbers.jpg');
+    background-repeat: repeat;
+    background-size: 1150px;
+    background-position: center;
+  }
+
+#titlos {
+    text-align: center;
+    padding: 0px;
+    border: 1px solid black;
+    background-color: #f3f2eee0;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 5px 5px rgba(185, 178, 178, 0.699);
+  }
+
+.perigrafi {
+    font-size: 19px;
+    border-radius: 10px;
+    background-color: #f3f2eee0;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 20px;
+    box-shadow: 5px 5px rgba(185, 178, 178, 0.699);
+  }
+
+  #ypografi {
+    background-color: #f3f2eee0;  
+  }
+
+#wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+  }
+
+  #score {
+    text-align: center;
+    padding: 0px;
+    border: 1px solid black;
+    background-color: #f3cccce0;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 5px 5px rgba(185, 178, 178, 0.699);
+  }
+  
+  .userAnswer  {
+    color: rgb(6, 52, 117);
+  }
+
+  .userCorrectResult {
+    color: green;
+  }
+
+  .userWrongResult {
+    color: red;
+  }
+
+  .erwtisi_aksiologisis {
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #f3f2eee0;
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid black;
+  }
+
+  .erwtisi_aksiologisis .titlos {
+    font-weight: bold ;
+  }
+
+  .erwtisi_aksiologisis .epiloges {
+    color: rgb(32, 32, 33);
+  }

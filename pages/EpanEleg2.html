@@ -1,0 +1,62 @@
+<!DOCTYPE htlm5>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/epan.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="wrapper" class="epan2">
+      <h1>Άσκηση Επανάληψης 2 - Έλεγχος</h1>
+      <div id="perigrafi">
+        Έστω ο αριθμός ρ=160.
+        <ul>
+          <li>
+            <b class="step-title">1ο βήμα</b> Βρίσκω το μισό του αριθμού ρ.
+          </li>
+          <li>
+            <b class="step-title">2o βήμα</b> Εφόσον ο αριθμός που προκύπτει
+            είναι φυσικός, επαναλαμβάνω το 1ο βήμα.
+          </li>
+        </ul>
+        Ποιός αριθμός προκύπτει στο τέλος;
+      </div>
+      <form>
+        <ul id="answers">
+          <li>
+            <input type="radio" id="a" name="answer" value="1" />
+            <label for="a">1</label>
+          </li>
+          <li>
+            <input type="radio" id="b" name="answer" value="1.5" />
+            <label for="b">1,5</label>
+          </li>
+          <li>
+            <input type="radio" id="c" name="answer" value="0.5" />
+            <label for="c">0,5</label>
+          </li>
+          <li>
+            <input type="radio" id="d" name="answer" value="2.5" />
+            <label for="d">2,5</label>
+          </li>
+          <li>
+            <input type="radio" id="e" name="answer" value="3.5" />
+            <label for="e">3,5</label>
+          </li>
+        </ul>
+        <input
+          type="button"
+          style="margin-left: 30%; width: 100px"
+          value="Υποβολή"
+          onclick="askSubmitHandler('ask_epan2', 'answer')"
+        />
+      </form>
+      <button
+        style="margin-left: 30%; width: 100px"
+        onclick="window.location.href = 'DiakladEleg.html';"
+      >
+        Επόμενο
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE htlm5>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main_page.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titlos">
+        <h2>
+           Αξιολόγηση Εργασίας:
+        </h2>
+      </div>
+      <div class="erwtisi_aksiologisis"> 
+        <div class="titlos"> 
+        1. Τι εντύπωση σου άφησε η ενασχόλησή σου με την εφαρμογή;
+        </div>
+        <div class="epiloges">
+              <input type="radio" id="aksiol1_a" name="aksiol1" value="1" />
+              <label for="a">Κακή</label>
+
+              <input type="radio" id="aksiol1_b" name="aksiol1" value="2" />
+              <label for="b">Μέτρια</label>
+
+              <input type="radio" id="aksiol1_c" name="aksiol1" value="3" />
+              <label for="c">Καλή</label>
+
+              <input type="radio" id="aksiol1_d" name="aksiol1" value="4" />
+              <label for="d">Αρκετά καλή</label>
+
+              <input type="radio" id="aksiol1_e" name="aksiol1" value="5" />
+              <label for="e">Άριστη</label>
+        </div>
+        <br>
+          <div class="titlos">
+          2. Πόσο δυσνοητές ήταν οι διαφάνειες με τη θεωρία και τις ασκήσεις;
+        </div> 
+          <div class="epiloges">
+                <input type="radio" id="aksiol2_a" name="aksiol2" value="1" />
+                <label for="a">Καθόλου</label>
+  
+                <input type="radio" id="aksiol2_b" name="aksiol2" value="2" />
+                <label for="b">Λίγο</label>
+  
+                <input type="radio" id="aksiol2_c" name="aksiol2" value="3" />
+                <label for="c">Μέτρια</label>
+  
+                <input type="radio" id="aksiol2_d" name="aksiol2" value="4" />
+                <label for="d">Αρκετά</label>
+  
+                <input type="radio" id="aksiol2_e" name="aksiol2" value="5" />
+                <label for="e">Πλήρως</label>
+              </div> 
+              <br>
+              <div class="titlos"> 
+            3. Πόσο κατανοητές έγιναν οι έννοιες που διαπραγματεύονται;
+            </div>
+            <div class="epiloges">
+                  <input type="radio" id="aksiol3_a" name="aksiol3" value="1" />
+                  <label for="a">Καθόλου</label>
+    
+                  <input type="radio" id="aksiol3_b" name="aksiol3" value="2" />
+                  <label for="b">Λίγο</label>
+    
+                  <input type="radio" id="aksiol3_c" name="aksiol3" value="3" />
+                  <label for="c">Μέτρια</label>
+    
+                  <input type="radio" id="aksiol3_d" name="aksiol3" value="4" />
+                  <label for="d">Αρκετά</label>
+    
+                  <input type="radio" id="aksiol3_e" name="aksiol3" value="5" />
+                  <label for="e">Πλήρως</label>
+            </div>
+            <br>
+              <div class="titlos">
+              4. Πόσο απείχαν οι ασκήσεις ως εφαρμογή των εννοιών;
+              </div>
+              <div class="epiloges">
+                    <input type="radio" id="aksiol4_a" name="aksiol4" value="1" />
+                    <label for="a">Καθόλου</label>
+      
+                    <input type="radio" id="aksiol4_b" name="aksiol4" value="2" />
+                    <label for="b">Λίγο</label>
+      
+                    <input type="radio" id="aksiol4_c" name="aksiol4" value="3" />
+                    <label for="c">Μέτρια</label>
+      
+                    <input type="radio" id="aksiol4_d" name="aksiol4" value="4" />
+                    <label for="d">Αρκετά</label>
+      
+                    <input type="radio" id="aksiol4_e" name="aksiol4" value="5" />
+                    <label for="e">Πλήρως</label>
+              </div>
+              <br>
+                <label for="fname">Είναι κάτι που θα ήθελες να αλλάξει;<br>
+                Γράψε το εδώ:</label>
+                <br>
+                <textarea id="change" name="change"></textarea> <br /><br />
+                <input type="button" 
+                       value="Υποβολή" 
+                       style="width: 150px; height: 30px"
+                       onclick="evalSubmitHandler('aksiol1'),evalSubmitHandler('aksiol2'),
+                                evalSubmitHandler('aksiol3'), evalSubmitHandler('aksiol4'),
+                                changesSubmitHandler('change')"
+                />
+              </form>
+      </div>
+        <button
+          style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 35px;
+            background-color: rgb(183, 180, 174);
+          "
+          onclick = "window.location.href = 'statistika.html';"
+        >
+          Επόμενο - Στατιστικά
+        </button>
+      </a>
+    </div>
+  </body>
+</html>

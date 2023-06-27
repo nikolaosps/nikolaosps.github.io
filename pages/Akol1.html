@@ -1,0 +1,75 @@
+<!DOCTYPE htlm5>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/akol.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Άσκηση Ακολουθίας-Αναδρομής 1</h1>
+      <div id="perigrafi">
+        Σύμφωνα με την ακολουθία του Fibonacci, οι δύο πρώτοι όροι είναι το 0
+        και το 1, ενώ κάθε επόμενος προκύπτει <br />
+        από το άθροισμα των δύο προηγούμενων.
+      </div>
+      <div id="perigrafi">
+        Παρακάτω δίνονται οι πρώτοι 6 όροι της ακολουθίας: <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;0,
+        &nbsp;&nbsp;&nbsp;&nbsp;1,&nbsp;&nbsp;&nbsp;&nbsp;1,
+        &nbsp;&nbsp;&nbsp;&nbsp;2,&nbsp;&nbsp;&nbsp;&nbsp;3,
+        &nbsp;&nbsp;&nbsp;&nbsp;5,&nbsp;&nbsp;&nbsp;&nbsp;; <br />
+
+        Μπορείς να μαντέψεις τον επόμενο;
+      </div>
+      <form>
+        <ul id="answers">
+          <li>
+            <input type="radio" id="a" name="answer" value="6" />
+            <label for="a">&nbsp;6</label>
+          </li>
+          <li>
+            <input type="radio" id="b" name="answer" value="7" />
+            <label for="b">&nbsp;7</label>
+          </li>
+          <li>
+            <input type="radio" id="c" name="answer" value="8" />
+            <label for="c">&nbsp;8</label>
+          </li>
+          <li>
+            <input type="radio" id="d" name="answer" value="10" />
+            <label for="d">10</label>
+          </li>
+          <li>
+            <input type="radio" id="e" name="answer" value="11" />
+            <label for="e">11</label>
+          </li>
+        </ul>
+        <input
+          type="button"
+          style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            width: 100px;
+          "
+          value="Υποβολή"
+          onclick="askSubmitHandler('ask_akol1', 'answer')"
+        />
+      </form>
+        <button
+          style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100px;
+          "
+          onclick = "window.location.href = 'Akol2.html';"
+        >
+          Επόμενο
+        </button>
+      </a>
+    </div>
+  </body>
+</html>

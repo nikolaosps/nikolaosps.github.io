@@ -1,0 +1,58 @@
+<!DOCTYPE htlm5>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/epan.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Άσκηση Επανάληψης 1</h1>
+      <div id="perigrafi">
+        Έστω ο αριθμός ρ=2.
+        <ul>
+          <li><b class="step-title">1ο βήμα</b> Υπολογίζω τον ρ&sup2;.</li>
+          <li><b class="step-title">2o βήμα</b> Απ' αυτόν αφαιρώ 1.</li>
+        </ul>
+        Επαναλαμβάνω τα βήματα 1 και 2 συνολικά τρείς φορές. <br />
+        Ποιός αριθμός προκύπτει στο τέλος;
+      </div>
+      <form>
+        <ul id="answers">
+          <li>
+            <input type="radio" id="a" name="answer" value="8" />
+            <label for="a">&nbsp;&nbsp;&nbsp;8</label>
+          </li>
+          <li>
+            <input type="radio" id="b" name="answer" value="63" />
+            <label for="b">&nbsp;&nbsp;63</label>
+          </li>
+          <li>
+            <input type="radio" id="c" name="answer" value="34" />
+            <label for="c">&nbsp;&nbsp;34</label>
+          </li>
+          <li>
+            <input type="radio" id="d" name="answer" value="125" />
+            <label for="d">125</label>
+          </li>
+          <li>
+            <input type="radio" id="e" name="answer" value="45" />
+            <label for="e">&nbsp;&nbsp;45</label>
+          </li>
+        </ul>
+        <input
+          type="button"
+          style="margin-left: 30%; width: 100px"
+          value="Υποβολή"
+          onclick="askSubmitHandler('ask_epan1', 'answer')"
+        />
+      </form>
+      <button
+        style="margin-left: 30%; width: 100px"
+        onclick="window.location.href = 'EpanEleg2.html';"
+      >
+        Επόμενο
+      </button>
+    </div>
+  </body>
+</html>
