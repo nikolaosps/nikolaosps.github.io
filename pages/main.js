@@ -32,7 +32,7 @@ function askSubmitHandler(ask, radioName) {
     loadAnswers();
     // Πάρε την απάντηση από τη φόρμα 
     const answer = getRadioAnswer(radioName);
-    //alert("Η απάντηση αποθηκεύτηκε.");
+    alert("Η απάντηση αποθηκεύτηκε.");
     // Αποθήκευσέ την στο τύπου object userAnswers
     if ( userAnswers === null ) {
         userAnswers = {};
@@ -45,7 +45,7 @@ function askSubmitHandler(ask, radioName) {
 // Συνάρτηση που αποθηκεύει τα στοιχεία της αξιολόγησης στη μεταβλητή userEvaluation
 function evalSubmitHandler(eval) { 
     var ele = document.getElementsByName(eval);
- 
+    alert("Η απάντηση αποθηκεύτηκε .");
     for (i = 0; i < ele.length; i++) {
         if (ele[i].checked)
         userEvaluation[eval] = ele[i].value;
@@ -70,7 +70,7 @@ function statSubmitHandler(stat) {
         if (ele3[i].checked)
         userStatistics[stat] = ele3[i].value;
     }
-    
+    alert("Η απάντηση αποθηκεύτηκε .");
     //alert(JSON.stringify(userStatistics, null, 2));
 }
 
