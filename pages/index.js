@@ -1,5 +1,5 @@
 const url = 'https://nikosps.pockethost.io'
-const client = new PocketBase(url)
+const pb = new PocketBase(url)
 
 //Συνάρτηση που στέλνει τα στατιστικά του χρήστη στον server 
 //και προχωράει στην επόμενη σελίδα
