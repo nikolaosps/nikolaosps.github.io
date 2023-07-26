@@ -1,4 +1,5 @@
-const pb = new PocketBase("http://127.0.0.1:8090")
+const url = 'https://nikosps.pockethost.io'
+const client = new PocketBase(url)
 
 //Συνάρτηση που στέλνει τα στατιστικά του χρήστη στον server 
 //και προχωράει στην επόμενη σελίδα
