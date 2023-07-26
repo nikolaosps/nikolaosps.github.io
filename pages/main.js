@@ -18,7 +18,8 @@ function saveAnswers() {
     localStorage.setItem('answers', JSON.stringify(userAnswers));
 }
 
-function resetAll() {
+//Συνάρτηση που μηδενίζει τις απαντήσεις σε όλα τα objects
+function resetAllAnswers() {
     userAnswers = {};
     saveAnswers();
     userEvaluation = {};
@@ -43,22 +44,20 @@ function askSubmitHandler(ask, radioName) {
 }
 
 // Συνάρτηση που αποθηκεύει τα στοιχεία της αξιολόγησης στη μεταβλητή userEvaluation
-function evalSubmitHandler(eval) { 
-    var ele = document.getElementsByName(eval);
-    alert("Η απάντηση αποθηκεύτηκε .");
+function evalSubmitHandler(_eval) { 
+    var ele = document.getElementsByName(_eval);
+    
     for (i = 0; i < ele.length; i++) {
         if (ele[i].checked)
-        userEvaluation[eval] = ele[i].value;
+        userEvaluation[_eval] = ele[i].value;
     }
-    
-    //alert(JSON.stringify(userEvaluation, null, 2));
+    alert("Η απάντηση αποθηκεύτηκε ."); 
 }
 
 // Συνάρτηση που αποθηκεύει προτεινόμενες αλλαγές στη μεταβλητή userChanges
 function changesSubmitHandler(changes){
     const ele2 = document.getElementById(changes);
     userChanges[changes] = ele2.value;
-    //alert(JSON.stringify(userChanges, null, 2));
 }
 
 /* Συνάρτηση που αποθηκεύει τα στατιστικά στοιχεία του χρήστη 
@@ -69,9 +68,8 @@ function statSubmitHandler(stat) {
     for (i = 0; i < ele3.length; i++) {
         if (ele3[i].checked)
         userStatistics[stat] = ele3[i].value;
-    }
+    }   
     alert("Η απάντηση αποθηκεύτηκε .");
-    //alert(JSON.stringify(userStatistics, null, 2));
 }
 
 // Συνάρτηση που επιστρέφει την τιμή από την απάντηση του χρήστη 
@@ -119,9 +117,9 @@ function askSubmitHandler_Diaklad(ask) {
     } 
     userAnswers[ask] = answer;
     saveAnswers();
-    //alert(JSON.stringify(userAnswers, null, 2))
 }
 
+//Βοηθητική συνάρτηση που εμφανίζει την απάντηση του χρήστη και αν είναι Σωστή ή Λάθος
 function addAnswerToElement(parentElement, id, title, answer, result) {
     const elem = document.createElement('div');
     elem.id = id;
@@ -135,12 +133,13 @@ function addAnswerToElement(parentElement, id, title, answer, result) {
     parentElement.appendChild(elem);
 }
 
+//Συνάρτηση που εμφανίζει τις απαντήσεις και τη βαθμολογία του χρήστη
 function printResults() {
     loadAnswers(); // Φόρτωση των απαντήσεων στη μεταβλητή userAnswers
     let mykeys = Object.getOwnPropertyNames(correct_answers);
     const results = checkAnswers(correct_answers, userAnswers);
     const parentElement = document.getElementById("resultsContainer");
-    var score = 0;
+    var score = 0;//μεταβλητή που αποθηκεύεται η βαθμολογία
     
     for ( i in mykeys) {
         const key = mykeys[i];

@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/main_page.css" />
     <script src="main.js"></script>
+    <script src="pocketbase.umd.js"></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -17,19 +19,19 @@
         1. Τι εντύπωση σου άφησε η ενασχόλησή σου με την εφαρμογή;
         </div>
         <div class="epiloges">
-              <input type="radio" id="aksiol1_a" name="aksiol1" value="1" />
+              <input type="radio" id="aksiol1_a" name="impression" value="Κακή" />
               <label for="a">Κακή</label>
 
-              <input type="radio" id="aksiol1_b" name="aksiol1" value="2" />
+              <input type="radio" id="aksiol1_b" name="impression" value="Μέτρια" />
               <label for="b">Μέτρια</label>
 
-              <input type="radio" id="aksiol1_c" name="aksiol1" value="3" />
+              <input type="radio" id="aksiol1_c" name="impression" value="Καλή" />
               <label for="c">Καλή</label>
 
-              <input type="radio" id="aksiol1_d" name="aksiol1" value="4" />
+              <input type="radio" id="aksiol1_d" name="impression" value="Αρκετά καλή" />
               <label for="d">Αρκετά καλή</label>
 
-              <input type="radio" id="aksiol1_e" name="aksiol1" value="5" />
+              <input type="radio" id="aksiol1_e" name="impression" value="Άριστη" />
               <label for="e">Άριστη</label>
         </div>
         <br>
@@ -37,19 +39,19 @@
           2. Πόσο δυσνοητές ήταν οι διαφάνειες με τη θεωρία και τις ασκήσεις;
         </div> 
           <div class="epiloges">
-                <input type="radio" id="aksiol2_a" name="aksiol2" value="1" />
+                <input type="radio" id="aksiol2_a" name="difficulty" value="Καθόλου" />
                 <label for="a">Καθόλου</label>
   
-                <input type="radio" id="aksiol2_b" name="aksiol2" value="2" />
+                <input type="radio" id="aksiol2_b" name="difficulty" value="Λίγο" />
                 <label for="b">Λίγο</label>
   
-                <input type="radio" id="aksiol2_c" name="aksiol2" value="3" />
+                <input type="radio" id="aksiol2_c" name="difficulty" value="Μέτρια" />
                 <label for="c">Μέτρια</label>
   
-                <input type="radio" id="aksiol2_d" name="aksiol2" value="4" />
+                <input type="radio" id="aksiol2_d" name="difficulty" value="Αρκετά" />
                 <label for="d">Αρκετά</label>
   
-                <input type="radio" id="aksiol2_e" name="aksiol2" value="5" />
+                <input type="radio" id="aksiol2_e" name="difficulty" value="Πλήρως" />
                 <label for="e">Πλήρως</label>
               </div> 
               <br>
@@ -57,19 +59,19 @@
             3. Πόσο κατανοητές έγιναν οι έννοιες που διαπραγματεύονται;
             </div>
             <div class="epiloges">
-                  <input type="radio" id="aksiol3_a" name="aksiol3" value="1" />
+                  <input type="radio" id="aksiol3_a" name="understanding" value="Καθόλου" />
                   <label for="a">Καθόλου</label>
     
-                  <input type="radio" id="aksiol3_b" name="aksiol3" value="2" />
+                  <input type="radio" id="aksiol3_b" name="understanding" value="Λίγο" />
                   <label for="b">Λίγο</label>
     
-                  <input type="radio" id="aksiol3_c" name="aksiol3" value="3" />
+                  <input type="radio" id="aksiol3_c" name="understanding" value="Μέτρια" />
                   <label for="c">Μέτρια</label>
     
-                  <input type="radio" id="aksiol3_d" name="aksiol3" value="4" />
+                  <input type="radio" id="aksiol3_d" name="understanding" value="Αρκετά" />
                   <label for="d">Αρκετά</label>
     
-                  <input type="radio" id="aksiol3_e" name="aksiol3" value="5" />
+                  <input type="radio" id="aksiol3_e" name="understanding" value="Πλήρως" />
                   <label for="e">Πλήρως</label>
             </div>
             <br>
@@ -77,36 +79,37 @@
               4. Πόσο απείχαν οι ασκήσεις ως εφαρμογή των εννοιών;
               </div>
               <div class="epiloges">
-                    <input type="radio" id="aksiol4_a" name="aksiol4" value="1" />
+                    <input type="radio" id="aksiol4_a" name="distance" value="Καθόλου" />
                     <label for="a">Καθόλου</label>
       
-                    <input type="radio" id="aksiol4_b" name="aksiol4" value="2" />
+                    <input type="radio" id="aksiol4_b" name="distance" value="Λίγο" />
                     <label for="b">Λίγο</label>
       
-                    <input type="radio" id="aksiol4_c" name="aksiol4" value="3" />
+                    <input type="radio" id="aksiol4_c" name="distance" value="Μέτρια" />
                     <label for="c">Μέτρια</label>
       
-                    <input type="radio" id="aksiol4_d" name="aksiol4" value="4" />
+                    <input type="radio" id="aksiol4_d" name="distance" value="Αρκετά" />
                     <label for="d">Αρκετά</label>
       
-                    <input type="radio" id="aksiol4_e" name="aksiol4" value="5" />
+                    <input type="radio" id="aksiol4_e" name="distance" value="Πλήρως" />
                     <label for="e">Πλήρως</label>
               </div>
               <br>
                 <label for="fname">Είναι κάτι που θα ήθελες να αλλάξει;<br>
                 Γράψε το εδώ:</label>
                 <br>
-                <textarea id="change" name="change"></textarea> <br /><br />
+                <textarea id="changes" name="changes"></textarea> <br /><br />
                 <input type="button" 
                        value="Υποβολή" 
                        style="width: 150px; height: 30px"
-                       onclick="evalSubmitHandler('aksiol1'),evalSubmitHandler('aksiol2'),
-                                evalSubmitHandler('aksiol3'), evalSubmitHandler('aksiol4'),
-                                changesSubmitHandler('change')"
+                       onclick="evalSubmitHandler('impression'),evalSubmitHandler('difficulty'),
+                                evalSubmitHandler('understanding'), evalSubmitHandler('distance'),
+                                changesSubmitHandler('changes')"
                 />
               </form>
       </div>
         <button
+          id ="evalBtn"
           style="
             display: block;
             margin-left: auto;
@@ -115,7 +118,7 @@
             height: 35px;
             background-color: rgb(183, 180, 174);
           "
-          onclick = "window.location.href = 'statistika.html';"
+          onclick = "submitEvaluationAndNext()"
         >
           Επόμενο - Στατιστικά
         </button>

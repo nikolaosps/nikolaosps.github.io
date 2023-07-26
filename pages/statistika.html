@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/main_page.css" />
     <script src="main.js"></script>
+    <script src="pocketbase.umd.js"></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -16,72 +18,72 @@
         <div id="perigrafi">  
         1. Ποιό είναι το φύλο σου;
         </div>
-        <form id="aksiol1">
-              <input type="radio" id="statis1_a" name="statis1" value="Αγόρι" />
+        <form id="statistika">
+              <input type="radio" id="statis1_a" name="sex" value="Αγόρι" />
               <label for="a">Αγόρι</label>
 
-              <input type="radio" id="statis1_b" name="statis1" value="Κορίτσι" />
+              <input type="radio" id="statis1_b" name="sex" value="Κορίτσι" />
               <label for="b">Κορίτσι</label>
         </form>
         <div id="perigrafi">  
           2. Ποιά είναι η ηλικία σου;
           </div>
-          <form id="aksiol2">
-                <input type="radio" id="statis2_a" name="statis2" value="14" />
+          <form id="statistika">
+                <input type="radio" id="statis2_a" name="age" value="14" />
                 <label for="a">14</label>
   
-                <input type="radio" id="statis2_b" name="statis2" value="15" />
+                <input type="radio" id="statis2_b" name="age" value="15" />
                 <label for="b">15</label>
   
-                <input type="radio" id="statis2_c" name="statis2" value="16" />
+                <input type="radio" id="statis2_c" name="age" value="16" />
                 <label for="c">16</label>
   
-                <input type="radio" id="statis2_d" name="statis2" value="17" />
+                <input type="radio" id="statis2_d" name="age" value="Μεγαλύτερη από 16" />
                 <label for="d">Μεγαλύτερη από 16</label>
           </form>
           <div id="perigrafi">  
             3. Ποιό μέσο χρησιμοποίησες για την εφαρμογή;
             </div>
-            <form id="aksiol3">
-                  <input type="radio" id="statis3_a" name="statis3" value="Υπολογιστή" />
+            <form id="statistika">
+                  <input type="radio" id="statis3_a" name="device" value="Υπολογιστή" />
                   <label for="a">Υπολογιστή</label>
     
-                  <input type="radio" id="statis3_b" name="statis3" value="Κινητό" />
+                  <input type="radio" id="statis3_b" name="device" value="Κινητό" />
                   <label for="b">Κινητό</label>
     
-                  <input type="radio" id="statis3_c" name="statis3" value="Τάμπλετ" />
+                  <input type="radio" id="statis3_c" name="device" value="Τάμπλετ" />
                   <label for="c">Τάμπλετ</label>
             </form>
             <div id="perigrafi">  
               4. Πόσο χρόνο αφιέρωσες για την ολοκλήρωση της εφαρμογής;
               </div>
-              <form id="aksiol3">
-                    <input type="radio" id="statis4_a" name="statis4" value="Λιγότερο από 20'" />
+              <form id="statistika">
+                    <input type="radio" id="statis4_a" name="timeToComplete" value="Λιγότερο από 20'" />
                     <label for="a">Λιγότερο από 20'</label>
       
-                    <input type="radio" id="statis4_b" name="statis4" value="20' με 30'" />
+                    <input type="radio" id="statis4_b" name="timeToComplete" value="20' με 30'" />
                     <label for="b">20' με 30'</label>
       
-                    <input type="radio" id="statis4_c" name="statis4" value="30' με 40'" />
+                    <input type="radio" id="statis4_c" name="timeToComplete" value="30' με 40'" />
                     <label for="c">30' με 40'</label>
       
-                    <input type="radio" id="statis4_d" name="statis4" value="Πάνω από 40'" />
+                    <input type="radio" id="statis4_d" name="timeToComplete" value="Πάνω από 40'" />
                     <label for="d">Πάνω από 40'</label>          
               </form>
               <div id="perigrafi">  
                 5. Πόση εμπειρία έχεις από αντίστοιχες εφαρμογές;
                 </div>
-                <form id="aksiol3">
-                      <input type="radio" id="statis5_a" name="statis5" value="Καθόλου" />
+                <form id="statistika">
+                      <input type="radio" id="statis5_a" name="experience" value="Καθόλου" />
                       <label for="a">Καθόλου</label>
         
-                      <input type="radio" id="statis5_b" name="statis5" value="Μικρή" />
+                      <input type="radio" id="statis5_b" name="experience" value="Μικρή" />
                       <label for="b">Μικρή</label>
         
-                      <input type="radio" id="statis5_c" name="statis5" value="Ικανοποιητική" />
+                      <input type="radio" id="statis5_c" name="experience" value="Ικανοποιητική" />
                       <label for="c">Ικανοποιητική</label>
 
-                      <input type="radio" id="statis5_d" name="statis5" value="Μεγάλη" />
+                      <input type="radio" id="statis5_d" name="experience" value="Μεγάλη" />
                       <label for="d">Μεγάλη</label>
         
                   <input
@@ -94,13 +96,14 @@
                       width: 100px;
                     "
                     value="Υποβολή όλων"
-                    onclick="statSubmitHandler('statis1'), statSubmitHandler('statis2'),
-                    statSubmitHandler('statis3'), statSubmitHandler('statis4'),
-                    statSubmitHandler('statis5')"
+                    onclick="statSubmitHandler('sex'), statSubmitHandler('age'),
+                    statSubmitHandler('device'), statSubmitHandler('timeToComplete'),
+                    statSubmitHandler('experience')"
                   />
                 </form>
       </div>
         <button
+          id="statBtn"
           style="
             display: block;
             margin-left: auto;
@@ -109,8 +112,7 @@
             height: 35px;
             background-color: rgb(183, 180, 174);
           "
-          onclick = "window.location.href = '../index.html'; 
-                     resetAll();"
+          onclick = "submitStatisticsAndReturnHome()"
         >
           Τέλος - Υποβολή απαντήσεων
         </button>
